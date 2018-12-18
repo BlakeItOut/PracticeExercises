@@ -1,0 +1,6 @@
+C:\Users\bshaw\source\repos\PracticeExercises\lcc-dotnet-aspnet-web-api-s2cc1\.vs\IssueTracker\lut\0\b\IssueTrackerShared\bin\Debug\IssueTrackerShared.dll.config
+C:\Users\bshaw\source\repos\PracticeExercises\lcc-dotnet-aspnet-web-api-s2cc1\.vs\IssueTracker\lut\0\b\IssueTrackerShared\bin\Debug\IssueTrackerShared.dll
+C:\Users\bshaw\source\repos\PracticeExercises\lcc-dotnet-aspnet-web-api-s2cc1\.vs\IssueTracker\lut\0\i\IssueTrackerShared\Debug\IssueTrackerShared.csprojAssemblyReference.cache
+C:\Users\bshaw\source\repos\PracticeExercises\lcc-dotnet-aspnet-web-api-s2cc1\.vs\IssueTracker\lut\0\i\IssueTrackerShared\Debug\IssueTrackerShared.csproj.CoreCompileInputs.cache
+C:\Users\bshaw\source\repos\PracticeExercises\lcc-dotnet-aspnet-web-api-s2cc1\.vs\IssueTracker\lut\0\i\IssueTrackerShared\Debug\IssueTrackerShared.csproj.CopyComplete
+C:\Users\bshaw\source\repos\PracticeExercises\lcc-dotnet-aspnet-web-api-s2cc1\.vs\IssueTracker\lut\0\i\IssueTrackerShared\Debug\IssueTrackerShared.dll

@@ -1,0 +1,12 @@
+C:\Users\bshaw\source\repos\PracticeExercises\dotnet-aspnet-web-api-fitness-frog\Treehouse.FitnessFrog.Shared\bin\Debug\Treehouse.FitnessFrog.Shared.dll.config
+C:\Users\bshaw\source\repos\PracticeExercises\dotnet-aspnet-web-api-fitness-frog\Treehouse.FitnessFrog.Shared\bin\Debug\Treehouse.FitnessFrog.Shared.dll
+C:\Users\bshaw\source\repos\PracticeExercises\dotnet-aspnet-web-api-fitness-frog\Treehouse.FitnessFrog.Shared\bin\Debug\Treehouse.FitnessFrog.Shared.pdb
+C:\Users\bshaw\source\repos\PracticeExercises\dotnet-aspnet-web-api-fitness-frog\Treehouse.FitnessFrog.Shared\bin\Debug\EntityFramework.dll
+C:\Users\bshaw\source\repos\PracticeExercises\dotnet-aspnet-web-api-fitness-frog\Treehouse.FitnessFrog.Shared\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bshaw\source\repos\PracticeExercises\dotnet-aspnet-web-api-fitness-frog\Treehouse.FitnessFrog.Shared\bin\Debug\EntityFramework.xml
+C:\Users\bshaw\source\repos\PracticeExercises\dotnet-aspnet-web-api-fitness-frog\Treehouse.FitnessFrog.Shared\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\bshaw\source\repos\PracticeExercises\dotnet-aspnet-web-api-fitness-frog\Treehouse.FitnessFrog.Shared\obj\Debug\Treehouse.FitnessFrog.Shared.csprojAssemblyReference.cache
+C:\Users\bshaw\source\repos\PracticeExercises\dotnet-aspnet-web-api-fitness-frog\Treehouse.FitnessFrog.Shared\obj\Debug\Treehouse.FitnessFrog.Shared.csproj.CoreCompileInputs.cache
+C:\Users\bshaw\source\repos\PracticeExercises\dotnet-aspnet-web-api-fitness-frog\Treehouse.FitnessFrog.Shared\obj\Debug\Treehouse.FitnessFrog.Shared.csproj.CopyComplete
+C:\Users\bshaw\source\repos\PracticeExercises\dotnet-aspnet-web-api-fitness-frog\Treehouse.FitnessFrog.Shared\obj\Debug\Treehouse.FitnessFrog.Shared.dll
+C:\Users\bshaw\source\repos\PracticeExercises\dotnet-aspnet-web-api-fitness-frog\Treehouse.FitnessFrog.Shared\obj\Debug\Treehouse.FitnessFrog.Shared.pdb
