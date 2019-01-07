@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DevBuildMoviesDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Actor">
+    <Key>
+      <PropertyRef Name="ActorID" />
+    </Key>
+    <Property Name="ActorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateOfBirth" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="DirectorID" Type="int" />
+  </EntityType>
+  <EntityType Name="Character">
+    <Key>
+      <PropertyRef Name="CharacterID" />
+    </Key>
+    <Property Name="CharacterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Occupation" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MovieID" Type="int" />
+  </EntityType>
+  <EntityType Name="CharacterActor">
+    <Key>
+      <PropertyRef Name="CharacterID" />
+      <PropertyRef Name="ActorID" />
+    </Key>
+    <Property Name="CharacterID" Type="int" Nullable="false" />
+    <Property Name="ActorID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Director">
+    <Key>
+      <PropertyRef Name="DirectorID" />
+    </Key>
+    <Property Name="DirectorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ActorID" Type="int" />
+  </EntityType>
+  <EntityType Name="Movie">
+    <Key>
+      <PropertyRef Name="MovieID" />
+    </Key>
+    <Property Name="MovieID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Genre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="DirectorID" Type="int" />
+    <Property Name="Watched" Type="nvarchar" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Actor_Director1">
+    <End Role="Director" Type="Self.Director" Multiplicity="0..1" />
+    <End Role="Actor" Type="Self.Actor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Director">
+        <PropertyRef Name="DirectorID" />
+      </Principal>
+      <Dependent Role="Actor">
+        <PropertyRef Name="DirectorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Character_Movie">
+    <End Role="Movie" Type="Self.Movie" Multiplicity="0..1" />
+    <End Role="Character" Type="Self.Character" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Movie">
+        <PropertyRef Name="MovieID" />
+      </Principal>
+      <Dependent Role="Character">
+        <PropertyRef Name="MovieID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CharacterActor_Actor">
+    <End Role="Actor" Type="Self.Actor" Multiplicity="1" />
+    <End Role="CharacterActor" Type="Self.CharacterActor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actor">
+        <PropertyRef Name="ActorID" />
+      </Principal>
+      <Dependent Role="CharacterActor">
+        <PropertyRef Name="ActorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CharacterActor_Character">
+    <End Role="Character" Type="Self.Character" Multiplicity="1" />
+    <End Role="CharacterActor" Type="Self.CharacterActor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Character">
+        <PropertyRef Name="CharacterID" />
+      </Principal>
+      <Dependent Role="CharacterActor">
+        <PropertyRef Name="CharacterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Director_Actor1">
+    <End Role="Actor" Type="Self.Actor" Multiplicity="0..1" />
+    <End Role="Director" Type="Self.Director" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actor">
+        <PropertyRef Name="ActorID" />
+      </Principal>
+      <Dependent Role="Director">
+        <PropertyRef Name="ActorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Movie_Director">
+    <End Role="Director" Type="Self.Director" Multiplicity="0..1" />
+    <End Role="Movie" Type="Self.Movie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Director">
+        <PropertyRef Name="DirectorID" />
+      </Principal>
+      <Dependent Role="Movie">
+        <PropertyRef Name="DirectorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DevBuildMoviesDBModelStoreContainer">
+    <EntitySet Name="Actor" EntityType="Self.Actor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Character" EntityType="Self.Character" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CharacterActor" EntityType="Self.CharacterActor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Director" EntityType="Self.Director" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Movie" EntityType="Self.Movie" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Actor_Director1" Association="Self.FK_Actor_Director1">
+      <End Role="Director" EntitySet="Director" />
+      <End Role="Actor" EntitySet="Actor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Character_Movie" Association="Self.FK_Character_Movie">
+      <End Role="Movie" EntitySet="Movie" />
+      <End Role="Character" EntitySet="Character" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CharacterActor_Actor" Association="Self.FK_CharacterActor_Actor">
+      <End Role="Actor" EntitySet="Actor" />
+      <End Role="CharacterActor" EntitySet="CharacterActor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CharacterActor_Character" Association="Self.FK_CharacterActor_Character">
+      <End Role="Character" EntitySet="Character" />
+      <End Role="CharacterActor" EntitySet="CharacterActor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Director_Actor1" Association="Self.FK_Director_Actor1">
+      <End Role="Actor" EntitySet="Actor" />
+      <End Role="Director" EntitySet="Director" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Movie_Director" Association="Self.FK_Movie_Director">
+      <End Role="Director" EntitySet="Director" />
+      <End Role="Movie" EntitySet="Movie" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

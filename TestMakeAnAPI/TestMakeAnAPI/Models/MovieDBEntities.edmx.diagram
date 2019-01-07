@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="660c7196fe6449ea9c1369e63ee967e9" Name="Diagram1">
+        <EntityTypeShape EntityType="DevBuildMoviesDBModel.Actor" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevBuildMoviesDBModel.Character" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevBuildMoviesDBModel.Director" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevBuildMoviesDBModel.Movie" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="DevBuildMoviesDBModel.FK_Actor_Director1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevBuildMoviesDBModel.FK_Director_Actor1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevBuildMoviesDBModel.FK_Character_Movie" ManuallyRouted="false" />
+        <AssociationConnector Association="DevBuildMoviesDBModel.FK_Movie_Director" ManuallyRouted="false" />
+        <AssociationConnector Association="DevBuildMoviesDBModel.CharacterActor" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

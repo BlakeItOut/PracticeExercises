@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DevBuildMoviesDBModelStoreContainer" CdmEntityContainer="DevBuildMoviesDBEntities">
+    <EntitySetMapping Name="Actors">
+      <EntityTypeMapping TypeName="DevBuildMoviesDBModel.Actor">
+        <MappingFragment StoreEntitySet="Actor">
+          <ScalarProperty Name="ActorID" ColumnName="ActorID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="DirectorID" ColumnName="DirectorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Characters">
+      <EntityTypeMapping TypeName="DevBuildMoviesDBModel.Character">
+        <MappingFragment StoreEntitySet="Character">
+          <ScalarProperty Name="CharacterID" ColumnName="CharacterID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="MovieID" ColumnName="MovieID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Directors">
+      <EntityTypeMapping TypeName="DevBuildMoviesDBModel.Director">
+        <MappingFragment StoreEntitySet="Director">
+          <ScalarProperty Name="DirectorID" ColumnName="DirectorID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ActorID" ColumnName="ActorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movies">
+      <EntityTypeMapping TypeName="DevBuildMoviesDBModel.Movie">
+        <MappingFragment StoreEntitySet="Movie">
+          <ScalarProperty Name="MovieID" ColumnName="MovieID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Genre" ColumnName="Genre" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="DirectorID" ColumnName="DirectorID" />
+          <ScalarProperty Name="Watched" ColumnName="Watched" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CharacterActor" TypeName="DevBuildMoviesDBModel.CharacterActor" StoreEntitySet="CharacterActor">
+      <EndProperty Name="Actor">
+        <ScalarProperty Name="ActorID" ColumnName="ActorID" />
+      </EndProperty>
+      <EndProperty Name="Character">
+        <ScalarProperty Name="CharacterID" ColumnName="CharacterID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

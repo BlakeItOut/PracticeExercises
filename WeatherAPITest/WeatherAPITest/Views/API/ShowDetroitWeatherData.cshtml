@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "ShowDetroitWeatherData";
+}
+
+<h2>ShowDetroitWeatherData</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.TextBox("latitude", "lat")
+    @Html.TextBox("longitude", "long")
+    <input type="submit" value="Submit" />
+}
+
+@if (@ViewBag.WeatherData != null)
+{
+    <table>
+        <tr>
+            @for (int i = 0; i < ViewBag.WeatherLabels.Count; i++)
+            {
+                <th>@ViewBag.WeatherLabels[i]</th>
+            }
+        </tr>  
+        <tr>
+            @for (int i = 0; i < ViewBag.WeatherData.Count; i++)
+            {
+
+                <td>@ViewBag.WeatherData[i]</td>
+            }
+        </tr>
+        
+    </table>
+    
+}
+
+
